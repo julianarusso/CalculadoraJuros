@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Valor financiado"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Taxa de Juros"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtValorFi" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Tipo taxa"
+        android:textColor="#000000"
+        android:textColorHighlight="#FDFDFD"
+        android:textColorHint="#FAFAFA"
+        android:textColorLink="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/edtTotal"
+        tools:layout_editor_absoluteX="48dp" />
+
+    <EditText
+        android:id="@+id/edtValorFi"
+        android:layout_width="233dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:shadowColor="#FFFFFF"
+        android:textColor="#050404"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FAFAFA"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/edtTaxa"
+        android:layout_width="229dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHighlight="#FAF8F8"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <Button
+        android:id="@+id/btnComposto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="40dp"
+        android:onClick="btnComposto"
+        android:text="Composto"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/btnSimples"
+        android:layout_width="163dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="36dp"
+        android:onClick="btnSimples"
+        android:text="Simples"
+        android:textColorHighlight="#FDFDFD"
+        android:textColorLink="#F6F4F4"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Total de Meses"
+        android:textColor="#000000"
+        android:textColorHighlight="#ECECEC"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FDFDFD"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTaxa" />
+
+    <EditText
+        android:id="@+id/edtTotal"
+        android:layout_width="229dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#F3F3F3"
+        android:textColorLink="#F8F8F8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="407dp"
+        android:layout_height="87dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="Calculadora de Juros"
+        tools:layout_editor_absoluteY="-4dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="295dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="88dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <RadioButton
+            android:id="@+id/taxaAA"
+            android:layout_width="85dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:text="a.a."
+            android:textColor="#000000"
+            android:textColorHighlight="#F6F6F6"
+            android:textColorHint="#F3F3F3"
+            android:textColorLink="#FAF6F6"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="89dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="20dp"
+            android:text="a.m."
+            android:textColor="#040303"
+            android:textColorHighlight="#FFFDFD"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#F3F0F0"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
